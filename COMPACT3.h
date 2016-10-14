@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+// Max count of satellites in one epoch
 #define MAX_COUNT 30
 
 class CCOMPACT3Record
