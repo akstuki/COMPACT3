@@ -133,13 +133,3 @@ int CCOMPACT3::loadfile(string pfile)
 	fin.close();
 	return m_vRecord.size();
 }
-
-const CCOMPACT3Record* CCOMPACT3::get(int i)
-{
-	return m_vRecord.at(i);
-}
-
-int CCOMPACT3::count()
-{
-	return m_vRecord.size();
-}
