@@ -2,8 +2,10 @@
 #include <string>
 #include <vector>
 
-// Max count of satellites in one epoch
-#define MAX_COUNT 30
+enum 
+{
+	e_Max_Count = 30,	/* Max count of satellites in one epoch */
+};
 
 class CCOMPACT3Record
 {
@@ -18,8 +20,8 @@ public:
 public:
 	double time;
 	int num;
-	float fvalue[MAX_COUNT];
-	char sats[MAX_COUNT][4];
+	float fvalue[e_Max_Count];
+	char sats[e_Max_Count][4];
 
 private:
 
