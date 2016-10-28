@@ -41,3 +41,11 @@ private:
 	tm m_START_TIME;
 };
 
+inline int CCOMPACT3::count()
+{
+	return m_vRecord.size();
+}
+inline const CCOMPACT3Record* CCOMPACT3::get(int i)
+{
+	return (i < count() ? m_vRecord.at(i) : NULL);
+}
