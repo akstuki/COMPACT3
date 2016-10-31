@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 using namespace std;
 
 CCOMPACT3Record::CCOMPACT3Record() 
@@ -39,17 +40,17 @@ CCOMPACT3::~CCOMPACT3()
 	removeAll();
 }
 
+void fdelete(CCOMPACT3Record* pItem)
+{
+    if (pItem)
+    {
+        delete pItem;
+        pItem = NULL;
+    }
+}
 void CCOMPACT3::removeAll()
 {
-	for (int i = 0; i < m_vRecord.size(); ++i)
-	{
-		CCOMPACT3Record* xRecord = m_vRecord.at(i);
-		if (xRecord)
-		{
-			delete xRecord;
-			xRecord = NULL;
-		}
-	}
+    for_each(m_vRecord.begin(),m_vRecord.end(),fdelete);
 	m_vRecord.clear();
 }
 
