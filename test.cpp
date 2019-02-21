@@ -1,7 +1,6 @@
 // test.cpp : 定义控制台应用程序的入口点。
 //
 
-#include "stdafx.h"
 #include "COMPACT3.h"
 
 int main(int argc, char* argv[]) {
