@@ -33,8 +33,8 @@ public:
 	virtual ~CCOMPACT3();
 public:
 	int loadfile(std::string pfile);
-	const CCOMPACT3Record* get(int i);
-	int count();
+	const CCOMPACT3Record* get(int i) const;
+	int count() const;
 	void removeAll();
 
 private:
@@ -42,11 +42,11 @@ private:
 	tm m_START_TIME;
 };
 
-inline int CCOMPACT3::count()
+inline int CCOMPACT3::count() const
 {
 	return m_vRecord.size();
 }
-inline const CCOMPACT3Record* CCOMPACT3::get(int i)
+inline const CCOMPACT3Record* CCOMPACT3::get(int i) const
 {
 	return (i < count() ? m_vRecord.at(i) : NULL);
 }
