@@ -98,7 +98,9 @@ int CCOMPACT3::loadfile(string pfile)
 		{
 			for (int i = 0; i < xRecord->num; ++i)
 			{
-				word >> (xRecord->fvalue[i]);
+				std::string temp;
+				word >> temp;
+				xRecord->fvalue[i] = std::strtof(temp.c_str(), NULL);
 			}
 			m_vRecord.push_back(xRecord);
 		}

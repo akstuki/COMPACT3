@@ -4,3 +4,4 @@
 *.zip
 *.S
 *.txt
+/build

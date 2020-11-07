@@ -1,14 +1,19 @@
-// test.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌÐòµÄÈë¿Úµã¡£
+// test.cpp : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨Ó¦ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµã¡£
 //
 
 #include "COMPACT3.h"
 
 int main(int argc, char* argv[]) {
     CCOMPACT3 compacts3;
-    compacts3.loadfile("..//TESTDATA//o.m12");
+    compacts3.loadfile("..//..//data//data.d12");
     for (int i=0;i<compacts3.count();++i) {
         const CCOMPACT3Record * record = compacts3.get(i);
-        printf("%d\n", record->num);
+        
+        for(int j=0;j<record->num;++j)
+        {
+           printf("%f ", record->fvalue[j]);
+        }
+        printf("\n");
     }
     return 0;
 }
