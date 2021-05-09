@@ -9,9 +9,18 @@ the demo code is in test.cpp
 4. build and run you app
 
 ## Python plot
-cpt3.py is a python script to plot compact3 data file, it's very simple and 
-you need to change the below code to run:
-```python
-CPT3_FILE_NAME = r'tmp.sn6'
+teqcplot.py is a python script to plot compact3 data file.
+
+Below are some examples to use python3 to plot teqc output files.
+```bash
+py teqcplot.py +skyplot "43 2013-05-17 01-00-00.azi" "43 2013-05-17 01-00-00.ele" "43 2013-05-17 01-00-00.m12"
 ```
-`CPT3_FILE_NAME` is the compact3 file you want to plot.
+```bash
+py teqcplot.py +azelplot "43 2013-05-17 01-00-00.azi" "43 2013-05-17 01-00-00.ele" "43 2013-05-17 01-00-00.d12"
+```
+```bash
+py teqcplot.py +bandplot "43 2013-05-17 01-00-00.azi" "43 2013-05-17 01-00-00.ele" "43 2013-05-17 01-00-00.m12"
+```
+```bash
+py teqcplot.py +azelplot "43 2013-05-17 01-00-00.azi" "43 2013-05-17 01-00-00.ele" "43 2013-05-17 01-00-00.m12"
+```
